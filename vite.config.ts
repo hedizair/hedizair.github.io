@@ -6,6 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/', // ✅ '/' car c'est le repo principal tonpseudo.github.io
   plugins: [
     vue(),
     vueDevTools(),
