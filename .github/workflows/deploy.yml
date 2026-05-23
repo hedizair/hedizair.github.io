@@ -22,7 +22,7 @@ jobs:
 
       # 3. Installe yarn et les dépendances
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install 
 
       # 4. Build le projet Vue
       - name: Build
