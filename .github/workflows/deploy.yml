@@ -3,32 +3,30 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Se déclenche à chaque push sur main
+      - main
+
+permissions:
+  contents: write  # ← indispensable pour que le bot puisse pousser sur gh-pages
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Récupère le code
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 2. Installe Node
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
 
-      # 3. Installe yarn et les dépendances
       - name: Install dependencies
-        run: yarn install 
+        run: yarn install
 
-      # 4. Build le projet Vue
       - name: Build
         run: yarn build
 
-      # 5. Déploie le dossier dist/ sur GitHub Pages
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
