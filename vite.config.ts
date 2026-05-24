@@ -1,19 +1,27 @@
 import { fileURLToPath, URL } from 'node:url'
 
-import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import vueDevTools from 'vite-plugin-vue-devtools'
+import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/', // ✅ '/' car c'est le repo principal tonpseudo.github.io
+  base: '/',
   plugins: [
     vue(),
-    vueDevTools(),
   ],
+
+  build: {
+    outDir: 'dist',      // (défaut)
+    sourcemap: false,    // désactive les sourcemaps en prod (bundle plus léger)
+    minify: 'esbuild',   // (défaut)
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
+  },
+  server: {
+    port: 3000,
+    open: true,
   },
 })

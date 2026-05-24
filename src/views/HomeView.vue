@@ -1,9 +1,13 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import HomeHero from '@/components/home/HomeHero.vue'
+import HomeAbout from '@/components/home/HomeAbout.vue'
+import HomeSkills from '@/components/home/HomeSkills.vue'
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <HomeHero />
+    <HomeAbout />
+    <HomeSkills />
   </main>
 </template>
