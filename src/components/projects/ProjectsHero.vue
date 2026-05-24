@@ -78,6 +78,6 @@ import { projects } from '@/data/projects';
 .projects-hero__subtitle {
     font-size: var(--text-base);
     color: var(--color-text-muted);
-    max-width: 500px;
+    max-width: 800px;
 }
 </style>
