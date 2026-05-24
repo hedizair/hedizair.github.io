@@ -42,7 +42,7 @@ defineExpose({ isOpen, toggle })
 .expandable-card {
     padding: 0;
     overflow: hidden;
-    cursor: pointer;
+
     /* Transition douce sur ombre et bordure au hover */
     transition:
         box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -74,6 +74,7 @@ defineExpose({ isOpen, toggle })
 
 .expandable-card__trigger:hover {
     background-color: var(--color-surface-alt);
+    cursor: pointer;
 }
 
 .expandable-card__header {
