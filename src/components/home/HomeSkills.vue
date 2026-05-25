@@ -4,7 +4,7 @@ import { skillCategories } from '@/data/skills';
 </script>
 
 <template>
-    <section class="section">
+    <section>
         <div class="container">
             <h2 class="section-title">Compétences <span>techniques</span></h2>
             <p class="section-subtitle">Classées par catégorie et niveau de maîtrise</p>

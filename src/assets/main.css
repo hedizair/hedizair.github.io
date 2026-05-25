@@ -138,12 +138,43 @@ button {
   padding: 0 var(--space-6);
 }
 
-/* Section avec padding vertical standard */
-.section {
+main {
+  border-top: 1px solid var(--color-border);
+}
+
+main > section {
+  padding: var(--space-16) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+main > section:first-child {
+    padding-top: calc(var(--nav-height) + var(--space-12));
+    padding-bottom: var(--space-10);
+
+}
+
+main > section:last-child {
+  border-bottom: none;
+}
+
+/* Alternance de fond une section sur deux */
+main > section:nth-child(odd) {
+  background: var(--color-bg);
+}
+
+main > section:nth-child(even) {
+  background: var(--color-surface);
+}
+
+/* .section {
   padding: var(--space-16) 0;
 }
 
-/* Titre de section avec trait décoratif */
+.section-light {
+  padding: var(--space-16) 0;
+  background: var(--color-surface);
+} */
+
 .section-title {
   font-size: var(--text-3xl);
   font-weight: 700;

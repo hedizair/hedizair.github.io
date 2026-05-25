@@ -20,7 +20,7 @@ const iconClassMap: Record<ExternalLink['id'], string> = {
 </script>
 
 <template>
-  <section class="section about">
+  <section >
     <div class="container about__grid">
 
       <div class="about__text">
@@ -67,11 +67,7 @@ const iconClassMap: Record<ExternalLink['id'], string> = {
 </template>
 
 <style scoped>
-.about {
-  background: var(--color-surface);
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
-}
+
 
 .about__grid {
   display: grid;

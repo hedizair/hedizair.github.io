@@ -19,12 +19,14 @@ export interface SkillCategory {
     skills: Skill[]
 }
 
+export type ProjectState = 'prod' | 'dev' | 'stopped'
 export interface Project {
     id: number
     title: string
     description: string
-    tags: Tech[]          // ← était string[], maintenant Tech[]
+    tags: Tech[]          
     githubUrl: string
+    state: ProjectState
     projectUrl?: string
     videoUrl?: string
 }

@@ -3,7 +3,7 @@ import { projects } from '@/data/projects';
 </script>
 
 <template>
-    <section class="projects-hero">
+    <section>
         <div class="container">
 
             <h1 class="projects-hero__title">
@@ -19,12 +19,6 @@ import { projects } from '@/data/projects';
 </template>
 
 <style scoped>
-.projects-hero {
-    padding-top: calc(var(--nav-height) + var(--space-12));
-    padding-bottom: var(--space-10);
-    background: linear-gradient(160deg, #f0f4f8 60%, #e0ecf8 100%);
-    border-bottom: 1px solid var(--color-border);
-}
 
 .projects-hero__label {
     display: inline-flex;

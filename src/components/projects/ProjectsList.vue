@@ -30,14 +30,10 @@ const selectTag = (name: string | null) => {
 </script>
 
 <template>
-  <section class="section">
+  <section>
     <div class="container">
 
       <div class="projects-filters">
-        <!--
-          On utilise TechChip pour "Tous" aussi — sans logo, hoverable, active si null.
-          Comme ça tous les chips du filtre sont identiques visuellement.
-        -->
         <TechChip
           name="Tous"
           size="sm"
@@ -85,6 +81,7 @@ const selectTag = (name: string | null) => {
 </template>
 
 <style scoped>
+
 .projects-filters {
   display: flex;
   flex-wrap: wrap;
