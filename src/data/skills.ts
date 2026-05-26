@@ -13,6 +13,7 @@ export const skillCategories: SkillCategory[] = [
             { ...techs.php, level: 2 },
             { ...techs.java, level: 1 },
             { ...techs.cpp, level: 1 },
+            { ...techs.sql, level: 3 },
         ],
     },
     {
