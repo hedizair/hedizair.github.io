@@ -14,8 +14,8 @@ import { abouts } from '@/data/abouts'
                 </p>
 
                 <h1 class="hero__name">
-                    Hedi<br />
-                    <span class="hero__name-accent">Zair</span>
+                    {{abouts.firstName}} <br />
+                    <span class="hero__name-accent">{{abouts.lastName}}</span>
                 </h1>
 
                 <p class="hero__role">Développeur Full Stack</p>
