@@ -30,7 +30,7 @@ defineProps<{ project: Project }>()
         <p class="project-detail__description">{{ project.description }}</p>
 
         <div class="project-detail__links">
-          <a :href="project.githubUrl" target="_blank" rel="noopener" class="btn btn-outline">
+          <a v-for="url in project.githubUrl" :href="url" target="_blank" rel="noopener" class="btn btn-outline">
             <IconGitHub />
             GitHub
           </a>

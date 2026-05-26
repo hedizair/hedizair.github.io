@@ -25,7 +25,7 @@ export interface Project {
     title: string
     description: string
     tags: Tech[]          
-    githubUrl: string
+    githubUrl: string[]
     state: ProjectState
     projectUrl?: string
     videoUrl?: string

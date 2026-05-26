@@ -9,6 +9,7 @@ export const techs = {
     php: { name: 'PHP', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg' },
     java: { name: 'Java', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' },
     go: { name: 'Go', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg' },
+    cpp: { name: 'C++', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg' },
     python: { name: 'Python', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
     vue: { name: 'Vue 3', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg' },
     react: { name: 'React', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
@@ -28,7 +29,21 @@ export const techs = {
     gitlab: { name: 'GitLab', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg' },
     vite: { name: 'Vite', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg' },
     symfony: { name: 'Symfony', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/symfony/symfony-original.svg' },
-    ibmdb2: { name: 'IBM DB2', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ibm/ibm-original.svg' },
+    ibmdb2: { name: 'IBM DB2', logo: 'https://cdn.prod.website-files.com/699810ea0b5b9db13bfd895f/6998c6619f65ee418d6436b3_691fc419e04dd939f0129754_17602022879agHfI_ibm.png' },
     nginx: { name: 'NGINX', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg' },
     githubactions: { name: 'GitHub Actions', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg' },
+    // =========================
+    // 🧰 IDE / Tools
+    // =========================
+    vscode: { name: 'VS Code', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg' },
+    goland: { name: 'GoLand', logo: 'https://cdn.simpleicons.org/goland' },
+    datagrip: { name: 'DataGrip', logo: 'https://cdn.simpleicons.org/datagrip' },
+    webstorm: { name: 'WebStorm', logo: 'https://cdn.simpleicons.org/webstorm' },
+    phpstorm: { name: 'PhpStorm', logo: 'https://cdn.simpleicons.org/phpstorm' },
+    dbeaver: { name: 'DBeaver', logo: 'https://cdn.simpleicons.org/dbeaver' },
+    visualstudio: { name: 'Visual Studio', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-original.svg' },
+    postman: { name: 'Postman', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg' },
+    codex: { name: 'Codex', logo: 'https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/openai.png' },
+    inform3: { name: 'Infor M3', logo: 'https://www.ezcomsoftware.com/wp-content/uploads/2023/11/Infor-M3-logo2-300x109.png' },
+
 } satisfies Record<string, Tech>

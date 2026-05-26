@@ -12,6 +12,7 @@ export const skillCategories: SkillCategory[] = [
             { ...techs.go, level: 3 },
             { ...techs.php, level: 2 },
             { ...techs.java, level: 1 },
+            { ...techs.cpp, level: 1 },
         ],
     },
     {
@@ -42,8 +43,8 @@ export const skillCategories: SkillCategory[] = [
     },
     {
         id: 'devops',
-        label: 'DevOps & Outils',
-        icon: '🔧',
+        label: 'DevOps',
+        icon: '⚙️',
         skills: [
             { ...techs.docker, level: 2 },
             { ...techs.git, level: 3 },
@@ -51,6 +52,24 @@ export const skillCategories: SkillCategory[] = [
             { ...techs.githubactions, level: 2 },
             { ...techs.linux, level: 2 },
             { ...techs.nginx, level: 1 },
+
+        ],
+    },
+    {
+        id: 'devops',
+        label: 'Logiciels & Outils',
+        icon: '🔧',
+        skills: [
+            { ...techs.webstorm, level: 3 },
+            { ...techs.phpstorm, level: 3 },
+            { ...techs.datagrip, level: 3 },
+            { ...techs.goland, level: 3 },
+            { ...techs.vscode, level: 3 },
+            { ...techs.postman, level: 2 },
+            { ...techs.codex, level: 1 },
+            { ...techs.visualstudio, level: 2 },
+            { ...techs.inform3, level: 3 },
+            { ...techs.dbeaver, level: 2 },
 
         ],
     },
