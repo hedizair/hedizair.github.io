@@ -11,7 +11,7 @@ import { projects } from '@/data/projects';
             </h1>
 
             <p class="projects-hero__subtitle">
-                Cliquer sur un projet pour voir la description, le lien GitHub et une vidéo de présentation.
+                Cliquer sur un projet pour voir la description et le lien github.
             </p>
 
         </div>
