@@ -12,6 +12,7 @@ const emit = defineEmits<{ click: [] }>()
   <div
     class="state-chip"
   >
+    <span>test</span>
     <span >{{ state }}</span>
   </div>
 </template>
