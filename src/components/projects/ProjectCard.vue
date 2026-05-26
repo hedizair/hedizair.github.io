@@ -4,6 +4,7 @@ import TechChip from '@/components/ui/TechChip.vue';
 import IconGitHub from '@/components/icons/IconGitHub.vue'
 
 import type { Project } from '@/types';
+import ProjectStateChip from './ProjectStateChip.vue';
 
 defineProps<{ project: Project }>()
 </script>
@@ -13,7 +14,10 @@ defineProps<{ project: Project }>()
 
     <template #header>
       <div class="project-header">
-        <h3 class="project-header__title">{{ project.title }}</h3>
+        <div class="project-header__title-section">
+          <h3 class="project-header__title">{{ project.title }}</h3>
+          <ProjectStateChip :state="project.state"></ProjectStateChip>
+        </div>
         <div class="project-header__chips">
           <TechChip v-for="tag in project.tags" :key="tag.name" :name="tag.name" :logo="tag.logo" />
         </div>
@@ -47,11 +51,15 @@ defineProps<{ project: Project }>()
 </template>
 
 <style scoped>
-.project-header__title {
+.project-header__title-section {
+  margin-bottom: var(--space-3);
+  display: flex;
+  gap: 10px;
+}
+.project-header__title- {
   font-size: var(--text-lg);
   font-weight: 600;
   color: var(--color-text);
-  margin-bottom: var(--space-3);
 }
 
 .project-header__chips {

@@ -35,7 +35,7 @@ export const skillCategories: SkillCategory[] = [
             { ...techs.mysql, level: 1 },
             { ...techs.mongodb, level: 2 },
             { ...techs.redis, level: 1 },
-            { ...techs.ssis, level: 1 },
+            { ...techs.ssis, level: 2 },
             { ...techs.microsoftsqlserver, level: 3 },
             { ...techs.ibmdb2, level: 1 },
         ],
