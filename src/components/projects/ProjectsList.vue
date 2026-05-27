@@ -1,34 +1,14 @@
 <script setup lang="ts">
 import ProjectListCard from '@/components/projects/ProjectListCard.vue'
 import ProjectsListFilters from '@/components/projects/ProjectsListFilters.vue'
-import { projects } from '@/data/projects'
-import type { Tech } from '@/types'
-import { computed, ref } from 'vue'
-import { useI18n } from 'vue-i18n';
-
+import { useProjectsStore } from '@/stores/projects'
+import { storeToRefs } from 'pinia'
+import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
-const allTags = computed<Tech[]>(() => {
-  const seen = new Set<string>()
-  const result: Tech[] = []
-  for (const tech of projects.flatMap(p => p.tags)) {
-    if (!seen.has(tech.name)) {
-      seen.add(tech.name)
-      result.push(tech)
-    }
-  }
-  return result.sort((a, b) => a.name.localeCompare(b.name))
-})
 
-const activeTag = ref<string | null>(null)
-
-const filteredProjects = computed(() => {
-  if (!activeTag.value) return projects
-  return projects.filter(p => p.tags.some(t => t.name === activeTag.value))
-})
-
-const selectTag = (name: string | null) => {
-  activeTag.value = activeTag.value === name ? null : name
-}
+const store = useProjectsStore()
+const { activeTag, filteredProjects, allTags } = storeToRefs(store) // On passe par cette fonction pour que les refs soient réactives dans le template au moment où activeTag, filteredProjects sont modifiés dans le store
+const { selectTag } = store
 
 </script>
 
@@ -45,11 +25,7 @@ const selectTag = (name: string | null) => {
       </p>
 
       <div class="projects__list">
-        <ProjectListCard
-          v-for="project in filteredProjects"
-          :key="project.id"
-          :project="project"
-        />
+        <ProjectListCard v-for="project in filteredProjects" :key="project.id" :project="project" />
       </div>
 
       <div v-if="filteredProjects.length === 0" class="projects__empty">
@@ -65,8 +41,6 @@ const selectTag = (name: string | null) => {
 </template>
 
 <style scoped>
-
-
 .projects-count {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
@@ -95,5 +69,7 @@ const selectTag = (name: string | null) => {
   color: var(--color-text-muted);
 }
 
-.projects__empty-icon { font-size: 2.5rem; }
+.projects__empty-icon {
+  font-size: 2.5rem;
+}
 </style>
