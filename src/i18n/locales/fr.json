@@ -1,0 +1,48 @@
+{
+    "nav": {
+        "home": "Accueil",
+        "projects": "Projets"
+    },
+    "home": {
+        "aboutTitle": "À",
+        "aboutTitle2": "propos",
+        "projects": "Projets",
+        "showAllProjects": "Voir tous mes projets",
+        "availableForNewOpportunities": "Disponible pour de nouvelles opportunités",
+        "FullStackDeveloper": "Développeur Full Stack",
+        "showMyProjects": "Voir mes projets",
+        "skillsTitle1": "Compétences",
+        "skillsTitle2": "techniques",
+        "classifiedByCategory": "Classées par catégorie et niveau de maîtrise",
+        "languages": "Langages",
+        "frameworks": "Frameworks",
+        "dataBdd": "Data & BDD",
+        "devops": "DevOps",
+        "softwareTools": "Logiciels & Outils",
+        "familiar": "Notions",
+        "proficient": "Maîtrise",
+        "expert": "Expert",
+        "presentation1": "Développeur full stack avec 3+ ans d'expérience, avec une dominante backend, je conçois des APIs, des pipelines ETL/ELT, des automatisations de processus métier et des interfaces web.",
+        "presentation2": "J'apprécie les architectures propres et bien typées, que ce soit pour du scheduling de tâches, de la gestion de flux de données, des services backend ou du développement web.",
+        "yearsOfExperience": "ans d'expérience",
+        "personalProjectsAchieved": "projets personnels réalisés",
+        "technosMastered": "technos maîtrisées"
+    },
+    "projects": {
+        "my": "Mes",
+        "projects": "projets",
+        "project": "projet",
+        "subtitle": "Cliquer sur un projet pour voir la description et le lien github.",
+        "showProject": "Voir le projet",
+        "noProjectsWithTech": "Aucun projet avec la techno",
+        "showAllProjects": "Voir tous les projets",
+        "all": "Tous",
+        "desc-project-portfolio":"Mon portfolio personnel, conçu pour présenter mes projets et compétences. Développé en Vue 3 + TypeScript, hébergé sur GitHub Pages avec un pipeline de déploiement automatique via GitHub Actions.",
+        "desc-project-skquiz": "Activité Discord multijoueur de quiz, lancée directement dans un salon vocal via le SDK Activities de Discord. Frontend en React, serveur en Node.js, avec une architecture Event-Driven : le serveur alimente une pile d'événements que le client poll en temps réel pour synchroniser les sessions de jeu. Gestion multi-session, plusieurs types de questions. Déploiement Docker en cours.",
+        "desc-project-drmundo": "Bot Discord en Node.js + TypeScript permettant de consulter un profil Riot Games, l'historique de parties et les statistiques League of Legends directement depuis Discord. Inclut un automate de notification des patch notes basé sur du scraping web. Disponible en français et en anglais. Déployé sur VPS OVH via Docker.",
+        "desc-project-skquizapi": "API REST en Go et PostgreSQL exposant une base de questions variées utilisée par Skquiz. La base a été constituée à partir de sources externes et enrichie via IA. Déployée sur VPS OVH via Docker, GitHub Actions et GHCR, derrière un reverse proxy NGINX.",
+        "desc-project-skaarplayauthapi": "API REST d'authentification centralisée en Go et PostgreSQL, socle de l'écosystème Skaarplay. Fournit l'authentification JWT et la gestion des droits à tous les services de la plateforme — dont Skquiz API. Déployée sur VPS OVH via Docker, GitHub Actions et GHCR, derrière NGINX.",
+        "desc-project-metinetflix": "Projet réalisé en binôme durant ma dernière année d’études avec PHP Symfony et MySQL. Il s’agit d’une plateforme web permettant aux utilisateurs de gérer leurs films, séries, animés et émissions TV vus ou à regarder, avec système de notes et commentaires, inspiré de AniList. Les données étaient récupérées via l’API de The Movie Database. Projet non publiée.",
+        "desc-project-mediation3d": "Projet de fin d’études réalisé en équipe de 4 pour une entreprise partenaire de l'Université Claude Bernard Lyon 1. La plateforme, développée avec Vue.js, Python et Babylon.js, permettait de rejoindre des sessions de médiation en ligne dans un environnement 3D interactif. Les mouvements du visage des utilisateurs étaient capturés via webcam puis retransmis en temps réel sur des avatars 3D. Projet non publiée."
+    }
+}

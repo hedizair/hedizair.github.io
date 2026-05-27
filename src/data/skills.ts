@@ -4,7 +4,7 @@ import { techs } from '@/data/techs'
 export const skillCategories: SkillCategory[] = [
     {
         id: 'languages',
-        label: 'Langages',
+        labelI18nKey: 'home.languages',
         icon: '⌨️',
         skills: [
             { ...techs.typescript, level: 3 },
@@ -18,7 +18,7 @@ export const skillCategories: SkillCategory[] = [
     },
     {
         id: 'frameworks',
-        label: 'Frameworks',
+        labelI18nKey: 'home.frameworks',
         icon: '🧩',
         skills: [
             { ...techs.vue, level: 2 },
@@ -30,7 +30,7 @@ export const skillCategories: SkillCategory[] = [
     },
     {
         id: 'data',
-        label: 'Data & BDD',
+        labelI18nKey: 'home.dataBdd',
         icon: '🗄️',
         skills: [
             { ...techs.postgresql, level: 3 },
@@ -44,7 +44,7 @@ export const skillCategories: SkillCategory[] = [
     },
     {
         id: 'devops',
-        label: 'DevOps',
+        labelI18nKey: 'home.devops',
         icon: '⚙️',
         skills: [
             { ...techs.docker, level: 2 },
@@ -57,8 +57,8 @@ export const skillCategories: SkillCategory[] = [
         ],
     },
     {
-        id: 'devops',
-        label: 'Logiciels & Outils',
+        id: 'software-tools',
+        labelI18nKey: 'home.softwareTools',
         icon: '🔧',
         skills: [
             { ...techs.webstorm, level: 3 },

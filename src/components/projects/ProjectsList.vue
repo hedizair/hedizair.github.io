@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
-import type { Tech } from '@/types'
+import ProjectListCard from '@/components/projects/ProjectListCard.vue'
+import ProjectsListFilters from '@/components/projects/ProjectsListFilters.vue'
 import { projects } from '@/data/projects'
-import ProjectCard from '@/components/projects/ProjectCard.vue'
-import TechChip from '@/components/ui/TechChip.vue'
+import type { Tech } from '@/types'
+import { computed, ref } from 'vue'
+import { useI18n } from 'vue-i18n';
 
+const { t } = useI18n()
 const allTags = computed<Tech[]>(() => {
   const seen = new Set<string>()
   const result: Tech[] = []
@@ -27,41 +29,23 @@ const filteredProjects = computed(() => {
 const selectTag = (name: string | null) => {
   activeTag.value = activeTag.value === name ? null : name
 }
+
 </script>
 
 <template>
   <section>
     <div class="container">
 
-      <div class="projects-filters">
-        <TechChip
-          name="Tous"
-          size="sm"
-          hoverable
-          :active="activeTag === null"
-          @click="selectTag(null)"
-        />
-
-        <TechChip
-          v-for="tag in allTags"
-          :key="tag.name"
-          :name="tag.name"
-          :logo="tag.logo"
-          size="sm"
-          hoverable
-          :active="activeTag === tag.name"
-          @click="selectTag(tag.name)"
-        />
-      </div>
+      <ProjectsListFilters :tags="allTags" :activeTag="activeTag" @select-tag="selectTag" />
 
       <p class="projects-count">
         <span class="projects-count__num">{{ filteredProjects.length }}</span>
-        projet{{ filteredProjects.length > 1 ? 's' : '' }}
+        {{ t('projects.project') }}{{ filteredProjects.length > 1 ? 's' : '' }}
         <span v-if="activeTag"> · {{ activeTag }}</span>
       </p>
 
       <div class="projects__list">
-        <ProjectCard
+        <ProjectListCard
           v-for="project in filteredProjects"
           :key="project.id"
           :project="project"
@@ -70,9 +54,9 @@ const selectTag = (name: string | null) => {
 
       <div v-if="filteredProjects.length === 0" class="projects__empty">
         <span class="projects__empty-icon">🔍</span>
-        <p>Aucun projet avec la techno <strong>{{ activeTag }}</strong>.</p>
+        <p>{{ t('projects.noProjectsWithTech') }} <strong>{{ activeTag }}</strong>.</p>
         <button class="btn btn-outline" @click="selectTag(null)">
-          Voir tous les projets
+          {{ t('projects.showAllProjects') }}
         </button>
       </div>
 
@@ -82,13 +66,6 @@ const selectTag = (name: string | null) => {
 
 <style scoped>
 
-.projects-filters {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: var(--space-2);
-  margin-bottom: var(--space-5);
-}
 
 .projects-count {
   font-size: var(--text-sm);

@@ -3,13 +3,15 @@ import ExpandableCard from '@/components/ui/ExpandableCard.vue';
 import TechChip from '@/components/ui/TechChip.vue';
 import type { SkillCategory, SkillLevel } from '@/types';
 import { computed } from 'vue';
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const props = defineProps<{ category: SkillCategory }>()
 
-const levelLabels: Record<SkillLevel, string> = {
-    1: 'Notions',
-    2: 'Maîtrise',
-    3: 'Expert',
+const leveli18nKeys: Record<SkillLevel, string> = {
+    1: 'home.familiar',
+    2: 'home.proficient',
+    3: 'home.expert',
 }
 
 const skillsByLevel = computed<Record<SkillLevel, typeof props.category.skills>>(() => {
@@ -27,7 +29,7 @@ const skillsByLevel = computed<Record<SkillLevel, typeof props.category.skills>>
         <template #header>
             <div class="skill-header">
                 <span class="skill-header__icon">{{ category.icon }}</span>
-                <span class="skill-header__label">{{ category.label }}</span>
+                <span class="skill-header__label">{{ t(category.labelI18nKey) }}</span>
                 <span class="skill-header__count">{{ category.skills.length }}</span>
             </div>
         </template>
@@ -39,11 +41,10 @@ const skillsByLevel = computed<Record<SkillLevel, typeof props.category.skills>>
 
                         <div class="skill-level-group__label">
                             <span class="skill-level-dot" :data-level="lvl"></span>
-                            {{ levelLabels[lvl] }}
+                            {{ t(leveli18nKeys[lvl]) }}
                         </div>
 
                         <div class="skill-grid">
-                            <!-- Logo + nom — taille md par défaut -->
                             <TechChip v-for="skill in skillsByLevel[lvl]" :key="skill.name" :name="skill.name"
                                 :logo="skill.logo" />
                         </div>

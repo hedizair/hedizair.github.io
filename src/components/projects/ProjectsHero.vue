@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { projects } from '@/data/projects';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n()
 </script>
 
 <template>
@@ -7,11 +9,11 @@ import { projects } from '@/data/projects';
         <div class="container">
 
             <h1 class="projects-hero__title">
-                Mes <span class="projects-hero__title-accent">projets</span>
+                {{ t('projects.my') }} <span class="projects-hero__title-accent">{{ t('projects.projects') }}</span>
             </h1>
 
             <p class="projects-hero__subtitle">
-                Cliquer sur un projet pour voir la description et le lien github.
+                {{ t('projects.subtitle') }}
             </p>
 
         </div>

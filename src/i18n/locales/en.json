@@ -1,0 +1,48 @@
+{
+    "nav": {
+        "home": "Home",
+        "projects": "Projects"
+    },
+    "home": {
+        "aboutTitle": "About",
+        "aboutTitle2": "me",
+        "projects": "Projects",
+        "showAllProjects": "View all my projects",
+        "availableForNewOpportunities": "Available for new opportunities",
+        "FullStackDeveloper": "Full Stack Developer",
+        "showMyProjects": "View my projects",
+        "skillsTitle1": "Technical",
+        "skillsTitle2": "skills",
+        "classifiedByCategory": "Sorted by category and proficiency level",
+        "languages": "Languages",
+        "frameworks": "Frameworks",
+        "dataBdd": "Data & DB",
+        "devops": "DevOps",
+        "softwareTools": "Software & Tools",
+        "familiar": "Familiar",
+        "proficient": "Proficient",
+        "expert": "Expert",
+        "presentation1": "Full stack developer with 3+ years of experience and a strong backend focus, I design APIs, ETL/ELT pipelines, business process automations, and web interfaces.",
+        "presentation2": "I enjoy clean, well-typed architectures — whether it's task scheduling, data flow management, backend services, or web development.",
+        "yearsOfExperience": "years of experience",
+        "personalProjectsAchieved": "personal projects completed",
+        "technosMastered": "technologies mastered"
+    },
+    "projects": {
+        "my": "My",
+        "projects": "projects",
+        "project": "project",
+        "subtitle": "Click on a project to view its description and GitHub link.",
+        "showProject": "View project",
+        "noProjectsWithTech": "No projects using",
+        "showAllProjects": "View all projects",
+        "all": "All",
+        "desc-project-portfolio": "My personal portfolio, designed to showcase my projects and skills. Built with Vue 3 + TypeScript, hosted on GitHub Pages with an automated deployment pipeline via GitHub Actions.",
+        "desc-project-skquiz": "A multiplayer Discord quiz activity, launched directly inside a voice channel via the Discord Activities SDK. Frontend in React, server in Node.js, with an event-driven architecture: the server feeds an event stack that the client polls in real time to synchronize game sessions. Multi-session support, multiple question types. Docker deployment in progress.",
+        "desc-project-drmundo": "A Discord bot built with Node.js + TypeScript for looking up Riot Games profiles, match history, and League of Legends stats directly from Discord. Includes a patch notes notification bot based on web scraping. Available in French and English. Deployed on OVH VPS via Docker.",
+        "desc-project-skquizapi": "A REST API in Go and PostgreSQL exposing a diverse question database used by Skquiz. The database was built from external sources and enriched with AI. Deployed on OVH VPS via Docker, GitHub Actions and GHCR, behind an NGINX reverse proxy.",
+        "desc-project-skaarplayauthapi": "A centralized authentication REST API in Go and PostgreSQL, serving as the backbone of the Skaarplay ecosystem. Provides JWT authentication and access control to all platform services — including Skquiz API. Deployed on OVH VPS via Docker, GitHub Actions and GHCR, behind NGINX.",
+        "desc-project-metinetflix": "A pair project built during my final year of studies using PHP Symfony and MySQL. A web platform allowing users to manage their watched and watchlisted movies, series, anime, and TV shows, with a rating and comment system inspired by AniList. Data was fetched via The Movie Database API. Not publicly released.",
+        "desc-project-mediation3d": "A graduation project built in a team of 4 for a partner company of Université Claude Bernard Lyon 1. The platform, developed with Vue.js, Python and Babylon.js, allowed users to join online mediation sessions in an interactive 3D environment. Users' facial movements were captured via webcam and streamed in real time onto 3D avatars. Not publicly released."
+    }
+}

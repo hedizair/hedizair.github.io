@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
 
 // useRoute() = hook Vue Router pour accéder à la route active
 // Permet de styler le lien actif différemment
 const route = useRoute()
+const { locale, availableLocales, t } = useI18n()
 
 // Détecte si on a scrollé pour ajouter une ombre à la navbar
 const scrolled = ref(false)
@@ -13,35 +15,42 @@ const handleScroll = () => {
     scrolled.value = window.scrollY > 10
 }
 
-// onMounted / onUnmounted = équivalent useEffect(() => {}, []) en React
 onMounted(() => window.addEventListener('scroll', handleScroll))
 onUnmounted(() => window.removeEventListener('scroll', handleScroll))
+
+// Labels affichés sur le bouton pour chaque locale
+const localeLabels: Record<string, string> = {
+    fr: 'FR',
+    en: 'EN',
+}
+
 </script>
 
 <template>
     <header class="navbar" :class="{ 'navbar--scrolled': scrolled }">
         <div class="container navbar__inner">
 
-            <!-- Logo / nom -->
             <RouterLink to="/" class="navbar__logo">
                 <span class="navbar__logo-bracket">&lt;</span>
                 HZ
                 <span class="navbar__logo-bracket">/&gt;</span>
             </RouterLink>
 
-            <!-- Navigation -->
             <nav class="navbar__nav">
-                <!--
-          RouterLink = composant Vue Router, équivalent de <Link> en React Router
-          :class avec objet = applique la classe si la condition est vraie
-        -->
                 <RouterLink to="/" class="navbar__link" :class="{ 'navbar__link--active': route.name === 'home' }">
-                    Accueil
+                    {{ t('nav.home') }}
                 </RouterLink>
                 <RouterLink to="/projects" class="navbar__link"
                     :class="{ 'navbar__link--active': route.name === 'projects' }">
-                    Projets
+                    {{ t('nav.projects') }}
                 </RouterLink>
+
+                <div class="locale-switcher">
+                    <button v-for="loc in availableLocales" :key="loc" class="locale-btn"
+                        :class="{ 'locale-btn--active': locale === loc }" @click="locale = loc">
+                        {{ localeLabels[loc] ?? loc.toUpperCase() }}
+                    </button>
+                </div>
             </nav>
         </div>
     </header>
@@ -122,5 +131,34 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
 .navbar__link--active::after,
 .navbar__link:hover::after {
     width: 100%;
+}
+
+.locale-switcher {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    margin-left: var(--space-2);
+    padding-left: var(--space-4);
+    border-left: 1px solid var(--color-border);
+}
+
+.locale-btn {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    font-family: var(--font-mono);
+    color: var(--color-text-muted);
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+    transition: color var(--transition-fast), background-color var(--transition-fast);
+    letter-spacing: 0.05em;
+}
+
+.locale-btn:hover {
+    color: var(--color-primary);
+    background-color: var(--color-primary-subtle);
+}
+
+.locale-btn--active {
+    color: var(--color-primary);
 }
 </style>

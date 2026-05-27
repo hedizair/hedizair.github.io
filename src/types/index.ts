@@ -14,7 +14,7 @@ export interface Skill extends Tech {
 
 export interface SkillCategory {
     id: string
-    label: string
+    labelI18nKey: string
     icon: string
     skills: Skill[]
 }
@@ -23,7 +23,7 @@ export type ProjectState = 'prod' | 'dev' | 'stopped'
 export interface Project {
     id: number
     title: string
-    description: string
+    descriptioni18nKey: string
     tags: Tech[]          
     githubUrl: string[]
     state: ProjectState
@@ -38,9 +38,9 @@ export interface ExternalLink {
 }
 
 export interface Abouts {
-    presentation1: string,
-    presentation2: string,
-    stats: { value: string, label: string }[],
+    presentation1i18nKey: string,
+    presentation2i18nKey: string,
+    stats: { value: string, labeli18nKey: string }[],
     yearOfExperience: number,
     firstName: string,
     lastName: string,

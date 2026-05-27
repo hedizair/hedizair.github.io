@@ -4,11 +4,12 @@ export const abouts: Abouts = {
     firstName: 'Hédi',
     lastName: 'Zaïr',
     jobTitle: 'Développeur Full Stack',
-    presentation1: "Développeur full stack avec 3+ ans d'expérience, avec une dominante backend, je conçois des APIs, des pipelines ETL/ELT, des automatisations de processus métier et des interfaces web.",
-    presentation2: "J'apprécie les architectures propres et bien typées — que ce soit pour du scheduling de tâches, de la gestion de flux de données, des services backend ou du développement web.", stats: [
-        { value: '3+', label: 'ans d\'expérience pro' },
-        { value: '7+', label: 'projets personnels réalisés' },
-        { value: '10+', label: 'technos maîtrisées' },
+    presentation1i18nKey: "home.presentation1",
+    presentation2i18nKey: "home.presentation2",
+    stats: [
+        { value: '3+', labeli18nKey: 'home.yearsOfExperience' },
+        { value: '7+', labeli18nKey: 'home.personalProjectsAchieved' },
+        { value: '10+', labeli18nKey: 'home.technosMastered' },
     ],
     yearOfExperience: 3,
     externalLinks: [

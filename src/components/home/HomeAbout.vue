@@ -4,44 +4,39 @@ import type { ExternalLink } from '@/types'
 import IconGitHub from '@/components/icons/IconGitHub.vue'
 import IconLinkedIn from '@/components/icons/IconLinkedIn.vue'
 import { type Component } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 // Map id → composant icône Vue
 // On ajoute ici chaque nouvelle icône sans toucher aux data
 const iconMap: Record<ExternalLink['id'], Component> = {
-  github:   IconGitHub,
+  github: IconGitHub,
   linkedin: IconLinkedIn,
 }
 
 // Map id → classe CSS pour la couleur de fond de l'icône
 const iconClassMap: Record<ExternalLink['id'], string> = {
-  github:   '',
+  github: '',
   linkedin: 'icon--linkedin',
 }
 </script>
 
 <template>
-  <section >
+  <section>
     <div class="container about__grid">
 
       <div class="about__text">
-        <h2 class="section-title">À <span>propos</span></h2>
-        <p class="about__para">{{ abouts.presentation1 }}</p>
-        <p class="about__para">{{ abouts.presentation2 }}</p>
+        <h2 class="section-title">{{ t('home.aboutTitle') }} <span>{{ t('home.aboutTitle2') }}</span></h2>
+        <p class="about__para">{{ t(abouts.presentation1i18nKey) }}</p>
+        <p class="about__para">{{ t(abouts.presentation2i18nKey) }}</p>
       </div>
 
-      <div class="about__links">        
-        <a  v-for="link in abouts.externalLinks"
-          :key="link.id"
-          :href="link.href"
-          target="_blank"
-          rel="noopener"
-          class="about__link-card card"
-        >
+      <div class="about__links">
+        <a v-for="link in abouts.externalLinks" :key="link.id" :href="link.href" target="_blank" rel="noopener"
+          class="about__link-card card">
           <span class="about__link-icon" :class="iconClassMap[link.id]">
-            <!--
-              component :is= permet de rendre dynamiquement un composant
-              selon une variable — ici on mappe l'id au bon composant icône
-            -->
+
             <component :is="iconMap[link.id]" />
           </span>
           <div>
@@ -51,12 +46,11 @@ const iconClassMap: Record<ExternalLink['id'], string> = {
           <span class="about__link-arrow">↗</span>
         </a>
 
-        <!-- Lien interne — pas dans les data car RouterLink ≠ <a> -->
         <RouterLink to="/projects" class="about__link-card card">
           <span class="about__link-icon icon--projects">⚡</span>
           <div>
-            <p class="about__link-label">Projets</p>
-            <p class="about__link-sub">Voir tous mes projets</p>
+            <p class="about__link-label">{{ t('home.projects') }}</p>
+            <p class="about__link-sub">{{ t('home.showAllProjects') }}</p>
           </div>
           <span class="about__link-arrow">→</span>
         </RouterLink>
@@ -67,8 +61,6 @@ const iconClassMap: Record<ExternalLink['id'], string> = {
 </template>
 
 <style scoped>
-
-
 .about__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -119,8 +111,14 @@ const iconClassMap: Record<ExternalLink['id'], string> = {
   color: var(--color-text);
 }
 
-.icon--linkedin { background: #e8f0fb; color: #0077b5; }
-.icon--projects { background: #fef9e7; }
+.icon--linkedin {
+  background: #e8f0fb;
+  color: #0077b5;
+}
+
+.icon--projects {
+  background: #fef9e7;
+}
 
 .about__link-label {
   font-size: var(--text-sm);
@@ -145,6 +143,8 @@ const iconClassMap: Record<ExternalLink['id'], string> = {
 }
 
 @media (max-width: 768px) {
-  .about__grid { grid-template-columns: 1fr; }
+  .about__grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

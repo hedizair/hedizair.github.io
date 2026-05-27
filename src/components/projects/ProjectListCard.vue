@@ -5,7 +5,9 @@ import IconGitHub from '@/components/icons/IconGitHub.vue'
 
 import type { Project } from '@/types';
 import ProjectStateChip from './ProjectStateChip.vue';
+import { useI18n } from 'vue-i18n';
 
+const { t } = useI18n()
 defineProps<{ project: Project }>()
 </script>
 
@@ -27,7 +29,7 @@ defineProps<{ project: Project }>()
     <template #content>
       <div class="project-detail">
 
-        <p class="project-detail__description">{{ project.description }}</p>
+        <p class="project-detail__description">{{ t(project.descriptioni18nKey) }}</p>
 
         <div class="project-detail__links">
           <a v-for="url in project.githubUrl" :href="url" target="_blank" rel="noopener" class="btn btn-outline">
@@ -36,7 +38,7 @@ defineProps<{ project: Project }>()
           </a>
           <a v-if="project.projectUrl" :href="project.projectUrl" target="_blank" rel="noopener"
             class="btn btn-outline">
-            Voir le projet ↗
+            {{ t('projects.showProject') }} ↗
           </a>
         </div>
 
