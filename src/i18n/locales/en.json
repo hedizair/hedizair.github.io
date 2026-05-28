@@ -32,7 +32,7 @@
         "my": "My",
         "projects": "projects",
         "project": "project",
-        "subtitle": "Click on a project to view its description and GitHub link.",
+        "subtitle": "Click on a project to view its description and GitHub link. Some GitHub repositories are private, so feel free to contact me for more information about a specific project!",
         "showProject": "View project",
         "noProjectsWithTech": "No projects using",
         "showAllProjects": "View all projects",
