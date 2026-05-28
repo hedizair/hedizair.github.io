@@ -32,7 +32,7 @@ export const projects: Project[] = [
         id: 4,
         title: 'Skquiz API',
         descriptioni18nKey: 'projects.desc-project-skquizapi',
-        tags: [techs.go, techs.postgresql, techs.githubactions, techs.docker, techs.githubactions, techs.nginx],
+        tags: [techs.go, techs.postgresql, techs.githubactions, techs.docker, techs.nginx],
         githubUrl: ['https://github.com/hedizair/skquiz-api'],
         projectUrl: 'https://hedizair.github.io',
         state: 'prod'
@@ -41,7 +41,7 @@ export const projects: Project[] = [
         id: 5,
         title: 'Skaarplay Auth API',
         descriptioni18nKey: 'projects.desc-project-skaarplayauthapi',
-        tags: [techs.go, techs.postgresql, techs.githubactions, techs.docker, techs.githubactions, techs.nginx],
+        tags: [techs.go, techs.postgresql, techs.githubactions, techs.docker, techs.nginx],
         githubUrl: ['https://github.com/hedizair/skaarplay-auth-api'],
         projectUrl: 'https://hedizair.github.io',
         state: 'prod'
