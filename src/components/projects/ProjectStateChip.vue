@@ -77,6 +77,11 @@ defineProps<{
   background: #ef4444;
 }
 
+.state-chip--beta .state-chip__dot,
+.state-chip--beta .state-chip__dot::after {
+  background: #b916be;
+}
+
 /* ===== ANIMATIONS ===== */
 
 @keyframes pulse {
