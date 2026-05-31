@@ -19,7 +19,8 @@ export const projects: Project[] = [
         tags: [techs.react, techs.typescript, techs.vite, techs.nodejs, techs.express, techs.docker],
         githubUrl: ['https://github.com/hedizair/skquiz-discord-activity'],
         projectUrl: 'https://sk-quiz.com/#/',
-        state: 'beta'
+        state: 'beta',
+        images: ['/projects/skquiz-1.png', '/projects/skquiz-2.png', '/projects/skquiz-3.png', '/projects/skquiz-4.png', '/projects/skquiz-5.png']
     },
     {
         id: 3,
@@ -37,7 +38,7 @@ export const projects: Project[] = [
         descriptioni18nKey: 'projects.desc-project-skquizapi',
         tags: [techs.go, techs.postgresql, techs.githubactions, techs.docker, techs.nginx],
         githubUrl: ['https://github.com/hedizair/skquiz-api'],
-        projectUrl: 'https://hedizair.github.io',
+        projectUrl: 'https://api.sk-quiz.com/swagger/index.html',
         state: 'prod',
         images: ['/projects/api-skquiz.png']
     },
@@ -47,7 +48,7 @@ export const projects: Project[] = [
         descriptioni18nKey: 'projects.desc-project-skaarplayauthapi',
         tags: [techs.go, techs.postgresql, techs.githubactions, techs.docker, techs.nginx],
         githubUrl: ['https://github.com/hedizair/skaarplay-auth-api'],
-        projectUrl: 'https://hedizair.github.io',
+        projectUrl: 'https://api.auth.skaarplay.com/swagger/index.html',
         state: 'prod',
         images: ['/projects/api-auth-skaarplay.png']
     },
