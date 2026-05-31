@@ -16,7 +16,7 @@ export const projects: Project[] = [
         id: 2,
         title: 'Skquiz',
         descriptioni18nKey: 'projects.desc-project-skquiz',
-        tags: [techs.react, techs.typescript, techs.vite, techs.nodejs, techs.express, techs.docker],
+        tags: [techs.react, techs.typescript, techs.vite, techs.nodejs, techs.express, techs.docker, techs.nginx, techs.githubactions],
         githubUrl: ['https://github.com/hedizair/skquiz-discord-activity'],
         projectUrl: 'https://sk-quiz.com/#/',
         state: 'beta',
