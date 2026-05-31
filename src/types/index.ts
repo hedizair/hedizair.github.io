@@ -29,6 +29,7 @@ export interface Project {
     state: ProjectState
     projectUrl?: string
     videoUrl?: string
+    images?: string[]
 }
 export interface ExternalLink {
     id: 'github' | 'linkedin'

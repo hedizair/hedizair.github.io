@@ -9,7 +9,8 @@ export const projects: Project[] = [
         tags: [techs.vue, techs.typescript, techs.vite, techs.githubactions],
         githubUrl: ['https://github.com/hedizair/hedizair.github.io'],
         projectUrl: 'https://hedizair.github.io',
-        state: 'prod'
+        state: 'prod',
+        images: ['/projects/portfolio.png']
     },
     {
         id: 2,
@@ -27,7 +28,8 @@ export const projects: Project[] = [
         tags: [techs.typescript, techs.nodejs, techs.docker, techs.githubactions],
         githubUrl: ['https://github.com/hedizair/bot-discord-drmundo'],
         projectUrl: 'https://top.gg/bot/964279841925001276',
-        state: 'prod'
+        state: 'prod',
+        images: ['/projects/dr-mundo-1.png', '/projects/dr-mundo-2.png', '/projects/dr-mundo-3.png', '/projects/dr-mundo-4.png', '/projects/dr-mundo-5.png']
     },
     {
         id: 4,
@@ -36,7 +38,8 @@ export const projects: Project[] = [
         tags: [techs.go, techs.postgresql, techs.githubactions, techs.docker, techs.nginx],
         githubUrl: ['https://github.com/hedizair/skquiz-api'],
         projectUrl: 'https://hedizair.github.io',
-        state: 'prod'
+        state: 'prod',
+        images: ['/projects/api-skquiz.png']
     },
     {
         id: 5,
@@ -45,7 +48,8 @@ export const projects: Project[] = [
         tags: [techs.go, techs.postgresql, techs.githubactions, techs.docker, techs.nginx],
         githubUrl: ['https://github.com/hedizair/skaarplay-auth-api'],
         projectUrl: 'https://hedizair.github.io',
-        state: 'prod'
+        state: 'prod',
+        images: ['/projects/api-auth-skaarplay.png']
     },
     {
         id: 6,
