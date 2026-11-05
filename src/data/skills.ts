@@ -10,7 +10,7 @@ export const skillCategories: SkillCategory[] = [
             { ...techs.typescript, level: 3 },
             { ...techs.javascript, level: 3 },
             { ...techs.go, level: 3 },
-            { ...techs.php, level: 2 },
+            { ...techs.php, level: 3 },
             { ...techs.java, level: 1 },
             { ...techs.cpp, level: 1 },
             { ...techs.sql, level: 3 },
